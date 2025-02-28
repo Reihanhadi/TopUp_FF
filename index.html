@@ -1,0 +1,233 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toko Item Game</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+        .container {
+            width: 90%;
+            max-width: 800px;
+            margin: 20px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #333;
+        }
+        .search-box {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .item-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+        }
+        .item {
+            width: 45%;
+            background: #fff;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .item img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        .item h3 {
+            margin: 10px 0;
+        }
+        .item p {
+            color: #007BFF;
+            font-weight: bold;
+        }
+        .item input {
+            width: 50px;
+            text-align: center;
+        }
+        .order-btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            color: white;
+            background-color: #25D366;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>FREE FIRE</h1>
+    
+    <!-- Kotak pencarian -->
+    <input type="text" class="search-box" id="search" onkeyup="searchItem()" placeholder="Golek ono dewe🗿...">
+    
+    <div class="item-list" id="item-list">
+        <!-- Contoh item -->
+        <div class="item" data-name="Diamond Free Fire">
+            <img src="https://postimg.cc/34QGYG5z" alt="Diamond FF">
+            <h3>12 Diamond Free Fire</h3>
+            <p>Rp 3.000</p>
+            <input type="number" min="0" value="0" class="qty" data-item="Diamond Free Fire" data-price="3000">
+        </div>
+        
+        <div class="item" data-name="Diamond Free Fire">
+    <img src="https://postimg.cc/34QGYG5z" alt="Diamond FF">
+    <h3>50 Diamond Free Fire</h3>
+    <p>Rp 8.000</p>
+    <input type="number" min="0" value="0" class="qty" data-item="50 Diamond Free Fire" data-price="8000">
+</div>
+
+    <div class="item" data-name="Diamond Free Fire">
+    <img src="https://postimg.cc/34QGYG5z" alt="Diamond FF">
+    <h3>70 Diamond Free Fire</h3>
+    <p>Rp 10.000</p>
+    <input type="number" min="0" value="0" class="qty" data-item="70 Diamond Free Fire" data-price="10000">
+</div>
+
+        <div class="item" data-name="Diamond Free Fire">
+    <img src="https://postimg.cc/34QGYG5z" alt="Diamond FF">
+    <h3>100 Diamond Free Fire</h3>
+    <p>Rp 15.000</p>
+    <input type="number" min="0" value="0" class="qty" data-item="100 Diamond Free Fire" data-price="15000">
+</div>
+
+        <div class="item" data-name="Diamond Free Fire">
+    <img src="https://postimg.cc/34QGYG5z" alt="Diamond FF">
+    <h3>140 Diamond Free Fire</h3>
+    <p>Rp 20.000</p>
+    <input type="number" min="0" value="0" class="qty" data-item="140 Diamond Free Fire" data-price="20000">
+</div>
+
+        <div class="item" data-name="Diamond Free Fire">
+    <img src="https://postimg.cc/34QGYG5z" alt="Diamond FF">
+    <h3>210 Diamond Free Fire</h3>
+    <p>Rp 30.000</p>
+    <input type="number" min="0" value="0" class="qty" data-item="210 Diamond Free Fire" data-price="30000">
+</div>
+
+        <div class="item" data-name="Diamond Free Fire">
+    <img src="https://postimg.cc/34QGYG5z" alt="Diamond FF">
+    <h3> Membership Mingguan 50 Diamond</h3>
+    <p>Rp 30.000</p>
+    <input type="number" min="0" value="0" class="qty" data-item="Membership Mingguan 50 Diamond" data-price="30000">
+</div>
+
+        <div class="item" data-name="Diamond Free Fire">
+    <img src="https://postimg.cc/34QGYG5z" alt="Diamond FF">
+    <h3>300 Diamond Free Fire</h3>
+    <p>Rp 45.000</p>
+    <input type="number" min="0" value="0" class="qty" data-item="300 Diamond Free Fire" data-price="45000">
+</div>
+
+        <div class="item" data-name="Diamond Free Fire">
+    <img src="https://postimg.cc/34QGYG5z" alt="Diamond FF">
+    <h3>Boyah Pass (BP CARD)</h3>
+    <p>Rp 48.000</p>
+    <input type="number" min="0" value="0" class="qty" data-item="Boyah Pass (BP CARD)" data-price="48000">
+</div>
+        
+        <div class="item" data-name="Diamond Free Fire">
+    <img src="https://postimg.cc/34QGYG5z" alt="Diamond FF">
+    <h3>355 Diamond Free Fire</h3>
+    <p>Rp 50.000</p>
+    <input type="number" min="0" value="0" class="qty" data-item="355 Diamond Free Fire" data-price="50000">
+</div>
+        
+        <div class="item" data-name="Diamond Free Fire">
+    <img src="https://postimg.cc/34QGYG5z" alt="Diamond FF">
+    <h3>Membership Bulanan 50 Diamond</h3>
+    <p>Rp 90.000</p>
+    <input type="number" min="0" value="0" class="qty" data-item="Membership Bulanan 50 Diamond" data-price="90000">
+</div>
+        
+        <div class="item" data-name="Diamond Free Fire">
+    <img src="https://postimg.cc/34QGYG5z" alt="Diamond FF">
+    <h3>720 Diamond Free Fire</h3>
+    <p>Rp 95.000</p>
+    <input type="number" min="0" value="0" class="qty" data-item="720 Diamond Free Fire" data-price="95000">
+</div>
+        
+        <div class="item" data-name="Diamond Free Fire">
+    <img src="https://postimg.cc/34QGYG5z" alt="Diamond FF">
+    <h3>1000 Diamond Free Fire</h3>
+    <p>Rp 130.000</p>
+    <input type="number" min="0" value="0" class="qty" data-item="1000 Diamond Free Fire" data-price="130000">
+</div>
+        
+    </div>
+
+    <a class="order-btn" href="#" onclick="orderNow()">Order via WhatsApp</a>
+</div>
+
+<script>
+    function searchItem() {
+        let input = document.getElementById("search").value.toLowerCase();
+        let items = document.getElementsByClassName("item");
+        
+        for (let i = 0; i < items.length; i++) {
+            let itemName = items[i].getAttribute("data-name").toLowerCase();
+            if (itemName.includes(input)) {
+                items[i].style.display = "block";
+            } else {
+                items[i].style.display = "none";
+            }
+        }
+    }
+
+    
+        function orderNow() {
+    let phone = "6289687923507"; 
+    let message = "*Halo, saya ingin memesan:*%0A"; 
+    let orderList = ""; 
+    let totalHarga = 0; 
+
+    document.querySelectorAll(".qty").forEach(function(input) {
+        let quantity = parseInt(input.value);
+        if (quantity > 0) {
+            let itemName = input.getAttribute("data-item");
+            let itemPrice = parseInt(input.getAttribute("data-price")); 
+            let totalPrice = quantity * itemPrice;
+
+            orderList += `- ${quantity}x ${itemName} (Rp ${totalPrice})%0A`;
+            totalHarga += totalPrice; 
+        }
+    });
+
+    if (orderList !== "") {
+        message += orderList; 
+        message += `%0A*Total Harga:* Rp ${totalHarga}%0A`; // Tambahkan total harga
+        message += `*Atas Nama:* %0A`; 
+        message += `*ID Saya:* `; 
+    }
+
+    let whatsappURL = `https://wa.me/${6289687923507}?text=${message}`;
+    window.open(whatsappURL, "_blank");
+}
+
+
+
+</script>
+
+</body>
+</html>

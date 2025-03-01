@@ -198,7 +198,7 @@
     
         function orderNow() {
     let phone = "6289687923507"; 
-    let message = "*Halo, saya ingin memesan:*%0A"; 
+    let message = "*Halo, saya ingin memesan*:%0A"; 
     let orderList = ""; 
     let totalHarga = 0; 
 
@@ -216,9 +216,9 @@
 
     if (orderList !== "") {
         message += orderList; 
-        message += `%0A*Total Harga:* Rp ${totalHarga}%0A`; // Tambahkan total harga
-        message += `*Atas Nama:* %0A`; 
-        message += `*ID Saya:* `; 
+        message += `%0A*Total Harga*: Rp ${totalHarga}%0A`; // Tambahkan total harga
+        message += `*Atas Nama*: %0A`; 
+        message += `*ID*: `; 
     }
 
     let whatsappURL = `https://wa.me/${6289687923507}?text=${message}`;

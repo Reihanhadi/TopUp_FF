@@ -22,6 +22,27 @@
             border-radius: 10px;
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
         }
+        .quantity-control {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.quantity-control button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.quantity-control button:hover {
+    background-color: #0056b3;
+}
+
         h1 {
             color: #333;
         }
@@ -88,91 +109,156 @@
           <img src="diamond ff.jpg" alt="12 Diamond FF">
             <h3>12 Diamond Free Fire</h3>
             <p>Rp 3.000</p>
-            <input type="number" min="0" value="0" class="qty" data-item="Diamond Free Fire" data-price="3000">
+            <div class="quantity-control">
+    <button class="decrease" onclick="changeQuantity(this, -1)">-</button>
+    <input type="number" min="0" value="0" class="qty" data-item="12 Diamond Free Fire" data-price="3000">
+    <button class="increase" onclick="changeQuantity(this, 1)">+</button>
+</div>
+
         </div>
         
         <div class="item" data-name="50 Diamond Free Fire">
       <img src="diamond ff.jpg" alt="50 Diamond FF">
     <h3>50 Diamond Free Fire</h3>
     <p>Rp 8.000</p>
+    <div class="quantity-control">
+    <button class="decrease" onclick="changeQuantity(this, -1)">-</button>
     <input type="number" min="0" value="0" class="qty" data-item="50 Diamond Free Fire" data-price="8000">
+    <button class="increase" onclick="changeQuantity(this, 1)">+</button>
+</div>
+
 </div>
 
     <div class="item" data-name="70 Diamond Free Fire">
       <img src="diamond ff.jpg" alt="70 Diamond FF">
     <h3>70 Diamond Free Fire</h3>
     <p>Rp 10.000</p>
+    <div class="quantity-control">
+    <button class="decrease" onclick="changeQuantity(this, -1)">-</button>
     <input type="number" min="0" value="0" class="qty" data-item="70 Diamond Free Fire" data-price="10000">
+    <button class="increase" onclick="changeQuantity(this, 1)">+</button>
+</div>
+
 </div>
 
         <div class="item" data-name="100 Diamond Free Fire">
     <img src="diamond ff.jpg" alt="100 Diamond FF">
     <h3>100 Diamond Free Fire</h3>
     <p>Rp 15.000</p>
+    <div class="quantity-control">
+    <button class="decrease" onclick="changeQuantity(this, -1)">-</button>
     <input type="number" min="0" value="0" class="qty" data-item="100 Diamond Free Fire" data-price="15000">
+    <button class="increase" onclick="changeQuantity(this, 1)">+</button>
+</div>
+
 </div>
 
         <div class="item" data-name="140 Diamond Free Fire">
     <img src="diamond ff.jpg" alt="140 Diamond FF">
     <h3>140 Diamond Free Fire</h3>
     <p>Rp 20.000</p>
+    <div class="quantity-control">
+    <button class="decrease" onclick="changeQuantity(this, -1)">-</button>
     <input type="number" min="0" value="0" class="qty" data-item="140 Diamond Free Fire" data-price="20000">
+    <button class="increase" onclick="changeQuantity(this, 1)">+</button>
+</div>
+
 </div>
 
         <div class="item" data-name="210 Diamond Free Fire">
     <img src="diamond ff.jpg" alt="210 Diamond FF">
     <h3>210 Diamond Free Fire</h3>
     <p>Rp 30.000</p>
+    <div class="quantity-control">
+    <button class="decrease" onclick="changeQuantity(this, -1)">-</button>
     <input type="number" min="0" value="0" class="qty" data-item="210 Diamond Free Fire" data-price="30000">
+    <button class="increase" onclick="changeQuantity(this, 1)">+</button>
+</div>
+
 </div>
 
         <div class="item" data-name="membership mingguan Diamond Free Fire">
     <img src="membership mingguan.png" alt="membership mingguan">
     <h3> Membership Mingguan 50 Diamond</h3>
     <p>Rp 30.000</p>
-    <input type="number" min="0" value="0" class="qty" data-item="Membership Mingguan 50 Diamond" data-price="30000">
+    <div class="quantity-control">
+    <button class="decrease" onclick="changeQuantity(this, -1)">-</button>
+    <input type="number" min="0" value="0" class="qty" data-item="Membership Mingguan 5p Diamond" data-price="30000">
+    <button class="increase" onclick="changeQuantity(this, 1)">+</button>
+</div>
+
 </div>
 
         <div class="item" data-name="300 Diamond Free Fire">
     <img src="diamond ff.jpg" alt="300 Diamond FF">
     <h3>300 Diamond Free Fire</h3>
     <p>Rp 45.000</p>
+    <div class="quantity-control">
+    <button class="decrease" onclick="changeQuantity(this, -1)">-</button>
     <input type="number" min="0" value="0" class="qty" data-item="300 Diamond Free Fire" data-price="45000">
+    <button class="increase" onclick="changeQuantity(this, 1)">+</button>
+</div>
+
 </div>
 
         <div class="item" data-name="Booyah passDiamond Free Fire">
     <img src="booyah pass.png" alt="booyah pass Diamond FF">
     <h3>Booyah Pass (BP CARD)</h3>
     <p>Rp 48.000</p>
-    <input type="number" min="0" value="0" class="qty" data-item="Boyah Pass (BP CARD)" data-price="48000">
+    <div class="quantity-control">
+    <button class="decrease" onclick="changeQuantity(this, -1)">-</button>
+    <input type="number" min="0" value="0" class="qty" data-item="Booyah Pass (BP CARD)" data-price="48000">
+    <button class="increase" onclick="changeQuantity(this, 1)">+</button>
+</div>
+
 </div>
         
         <div class="item" data-name="355 Diamond Free Fire">
     <img src="diamond ff.jpg" alt="355 Diamond FF">
     <h3>355 Diamond Free Fire</h3>
     <p>Rp 50.000</p>
+    <div class="quantity-control">
+    <button class="decrease" onclick="changeQuantity(this, -1)">-</button>
     <input type="number" min="0" value="0" class="qty" data-item="355 Diamond Free Fire" data-price="50000">
+    <button class="increase" onclick="changeQuantity(this, 1)">+</button>
+</div>
+
 </div>
         
         <div class="item" data-name="Membership bulananDiamond Free Fire">
     <img src="membership bulanan.png" alt="membership bulananDiamond FF">
     <h3>Membership Bulanan 50 Diamond</h3>
     <p>Rp 90.000</p>
+    <div class="quantity-control">
+    <button class="decrease" onclick="changeQuantity(this, -1)">-</button>
     <input type="number" min="0" value="0" class="qty" data-item="Membership Bulanan 50 Diamond" data-price="90000">
+    <button class="increase" onclick="changeQuantity(this, 1)">+</button>
+</div>
+
 </div>
         
         <div class="item" data-name="720 Diamond Free Fire">
     <img src="diamond ff.jpg" alt="720 Diamond FF">
     <h3>720 Diamond Free Fire</h3>
     <p>Rp 95.000</p>
+    <div class="quantity-control">
+    <button class="decrease" onclick="changeQuantity(this, -1)">-</button>
     <input type="number" min="0" value="0" class="qty" data-item="720 Diamond Free Fire" data-price="95000">
+    <button class="increase" onclick="changeQuantity(this, 1)">+</button>
+</div>
+
 </div>
         
         <div class="item" data-name="1000 Diamond Free Fire">
     <img src="diamond ff.jpg" alt="1000 Diamond FF">
     <h3>1000 Diamond Free Fire</h3>
     <p>Rp 130.000</p>
+    <div class="quantity-control">
+    <button class="decrease" onclick="changeQuantity(this, -1)">-</button>
     <input type="number" min="0" value="0" class="qty" data-item="1000 Diamond Free Fire" data-price="130000">
+    <button class="increase" onclick="changeQuantity(this, 1)">+</button>
+</div>
+
 </div>
         
     </div>
@@ -194,6 +280,14 @@
             }
         }
     }
+    function changeQuantity(button, amount) {
+    let input = button.parentElement.querySelector("input.qty");
+    let currentValue = parseInt(input.value) || 0;
+    let newValue = currentValue + amount;
+    if (newValue < 0) newValue = 0;
+    input.value = newValue;
+}
+
 
     
         function orderNow() {

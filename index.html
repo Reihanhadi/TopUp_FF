@@ -54,11 +54,11 @@
             border-radius: 5px;
         }
         .item-list {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 15px;
-        }
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
         .item {
             width: 45%;
             background: #fff;

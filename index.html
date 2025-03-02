@@ -57,12 +57,8 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 15px;
-}
-        @media (max-width: 600px) {
-    .item-list {
-        grid-template-columns: repeat(2, 1fr); /* Ubah jadi 2 kolom jika layar kecil */
-    }
-}
+        }
+
 
 
         .item {
@@ -269,6 +265,12 @@
         
     </div>
 
+    <label for="buyer-name">Nama:</label>
+<input type="text" id="buyer-name" placeholder="Masukkan nama kamu" required>
+
+<label for="buyer-id">ID :</label>
+<input type="text" id="buyer-id" placeholder="Masukkan ID " required>
+
     <a class="order-btn" href="#" onclick="orderNow()">Order via WhatsApp</a>
 </div>
 
@@ -297,8 +299,16 @@
 
     
         function orderNow() {
+    let name = document.getElementById("buyer-name").value.trim();
+    let id = document.getElementById("buyer-id").value.trim();
+
+    if (name === "" || id === "") {
+        alert("Nama dan ID pembeli wajib diisi!");
+        return;
+    }
+
     let phone = "6289687923507"; 
-    let message = "*Halo, saya ingin memesan*:%0A"; 
+    let message = `*Halo, saya ingin memesan*:%0A`; 
     let orderList = ""; 
     let totalHarga = 0; 
 
@@ -306,23 +316,25 @@
         let quantity = parseInt(input.value);
         if (quantity > 0) {
             let itemName = input.getAttribute("data-item");
-            let itemPrice = parseInt(input.getAttribute("data-price")); 
+            let itemPrice = parseInt(input.getAttribute("data-price"));
             let totalPrice = quantity * itemPrice;
 
             orderList += `- ${quantity}x ${itemName} (Rp ${totalPrice})%0A`;
-            totalHarga += totalPrice; 
+            totalHarga += totalPrice;
         }
     });
 
     if (orderList !== "") {
         message += orderList; 
-        message += `%0A*Total Harga*: Rp ${totalHarga}%0A`; // Tambahkan total harga
-        message += `*Atas Nama*: %0A`; 
-        message += `*ID*: `; 
+        message += `%0A*Total Harga*: Rp ${totalHarga}%0A`; 
+        message += `*Nama *: ${name}%0A`; 
+        message += `*ID *: ${id}`; 
     }
 
-    let whatsappURL = `https://wa.me/${6289687923507}?text=${message}`;
+    let whatsappURL = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
     window.open(whatsappURL, "_blank");
+}
+
 }
 
 

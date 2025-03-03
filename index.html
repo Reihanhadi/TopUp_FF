@@ -43,6 +43,7 @@
     background-color: #0056b3;
 }
 
+
         h1 {
             color: #333;
         }
@@ -269,7 +270,7 @@
 
 </div>
         
-    </div>
+    
 
     <label for="buyer-name">Nama:</label>
 <input type="text" id="buyer-name" placeholder="Masukkan nama kamu" required>
@@ -277,6 +278,7 @@
 <label for="buyer-id">ID :</label>
 <input type="text" id="buyer-id" placeholder="Masukkan ID " required>
 
+        </div>
     <a class="order-btn" href="#" onclick="orderNow()">Order via WhatsApp</a>
 </div>
 
@@ -298,7 +300,7 @@
     let input = button.parentElement.querySelector("input.qty");
     let currentValue = parseInt(input.value) || 0;
     let newValue = currentValue + amount;
-    if (newValue < 0) newValue = 0;
+    if (newValue < 0) newValue = 0; // Agar tidak bisa negatif
     input.value = newValue;
 }
 

@@ -192,7 +192,7 @@
     <p>Rp 30.000</p>
     <div class="quantity-control">
     <button class="decrease" onclick="changeQuantity(this, -1)">-</button>
-    <input type="number" min="0" value="0" class="qty" data-item="Membership Mingguan 5p Diamond" data-price="30000">
+    <input type="number" min="0" value="0" class="qty" data-item="Membership Mingguan 50 Diamond" data-price="30000">
     <button class="increase" onclick="changeQuantity(this, 1)">+</button>
 </div>
 
@@ -298,6 +298,10 @@
     }
     function changeQuantity(button, amount) {
     let input = button.parentElement.querySelector("input.qty");
+    if (!input) {
+        console.error("Input tidak ditemukan");
+        return;
+    }
     let currentValue = parseInt(input.value) || 0;
     let newValue = currentValue + amount;
     if (newValue < 0) newValue = 0; // Agar tidak bisa negatif
@@ -335,17 +339,13 @@
     if (orderList !== "") {
         message += orderList; 
         message += `%0A*Total Harga*: Rp ${totalHarga}%0A`; 
-        message += `*Nama *: ${name}%0A`; 
-        message += `*ID *: ${id}`; 
+        message += `*Nama*: ${name}%0A`; 
+        message += `*ID*: ${id}`; 
     }
 
     let whatsappURL = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
     window.open(whatsappURL, "_blank");
 }
-
-}
-
-
 
 </script>
 

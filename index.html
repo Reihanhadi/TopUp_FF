@@ -95,7 +95,7 @@
 
     <div style="margin-top: 10px; text-align: left;">
         <label for="buyer-id">ID :</label>
-        <input type="text" id="buyer-id" placeholder="Masukkan ID " required>
+        <input type="number" id="buyer-id" placeholder="Masukkan ID" required oninput="validateID(this)">
     </div>
 
     <div class="item-list" id="item-list">
@@ -144,6 +144,12 @@
             items[i].style.display = itemName.includes(input) ? "" : "none";
         }
     }
+    function validateID(input) {
+    input.value = input.value.replace(/[^0-9]/g, ''); // Hanya izinkan angka
+}
+
+
+   
 
     function changeQuantity(button, amount) {
         let input = button.parentElement.querySelector("input.qty");
